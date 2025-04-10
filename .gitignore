@@ -1,0 +1,24 @@
+/target
+/Cargo.lock
+
+# Environment files
+.env
+.env.*
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS specific files
+.DS_Store
+
+# Runtime data
+*.log
+logs/
+
+# Model files (typically large)
+*.gguf
+*.bin
+/models/

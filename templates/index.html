@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLaMa Chat</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LLaMa Chat</h1>
+            <p>A simple interface to interact with the LLaMa language model</p>
+        </header>
+        
+        <main>
+            <div id="chat-container">
+                <div id="chat-messages">
+                    <!-- Messages will be inserted here -->
+                </div>
+                
+                <div id="chat-input-container">
+                    <form id="chat-form">
+                        <textarea id="user-input" placeholder="Type your message here..." rows="3"></textarea>
+                        <button type="submit" id="send-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by Rust and LLaMa</p>
+        </footer>
+    </div>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
