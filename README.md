@@ -83,10 +83,6 @@ Some work that I hope to complete in the future:
 - **Performance Problems**: Adjust the model size or inference parameters in your .env file
 - **Connectivity Issues**: Verify that the mistral.rs server is running and accessible at the configured URL
 
-## License
-
-[MIT License](LICENSE)
-
 ## Acknowledgements
 
 - [EricLBuehler](https://github.com/EricLBuehler) for creating mistral.rs
