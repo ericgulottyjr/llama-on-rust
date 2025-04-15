@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let sessionId = null;
     
     // Fixed token count (for future slider implementation)
-    const DEFAULT_MAX_TOKENS = 1000;
+    //const DEFAULT_MAX_TOKENS = 1000;
     
     // Initialize the chat
     function initChat() {
@@ -85,9 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             addLoadingIndicator();
             
-            // Use fixed token count for now
-            const maxTokens = DEFAULT_MAX_TOKENS;
-            console.log(`Sending request with max_tokens: ${maxTokens}`);
+            console.log(`Sending request to server`);
             
             const response = await fetch('/api/chat', {
                 method: 'POST',
@@ -97,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({
                     message,
                     session_id: sessionId,
-                    max_tokens: maxTokens
                 })
             });
             
