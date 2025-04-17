@@ -66,12 +66,13 @@ pub async fn chat(
     
     // Clone what we need for the future
     let model = data.model.clone();
+    let history_clone = history.clone();
     
     // Release the lock before the async operation to avoid blocking
     drop(sessions);
     
     // Generate response
-    match model.model.generate_response(&enhanced_prompt, max_tokens).await {
+    match model.model.generate_response(&enhanced_prompt, max_tokens, &history_clone).await {
         Ok(response) => {
             // Reacquire lock to update history
             if let Ok(mut sessions) = data.sessions.lock() {
